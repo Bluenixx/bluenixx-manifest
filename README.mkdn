@@ -1,36 +1,32 @@
-LineageOS
-===========
+### Bluenixx Build Manifest
 
-Getting started
----------------
+Configure your git with your credentials.
+example:
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
-
-To initialize your local repository using the LineageOS trees, use a command like this:
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-24.0 --git-lfs
+git config --global user.name "Your Name"
+git config --global user.email "youremail@gmail.com"
 ```
-Then to sync up:
+Log in with your Google account on ![Android Google Source](https://android.googlesource.com/) and copy the code that appears, paste it into the terminal, and then you can start your build.
+
+Remember, all of this only applies if you're using your own build server. If it's local, there are more things to configure. Read the ![Lineage OS](https://wiki.lineageos.org/) documentation.
+
+
+Initialize the Repo:
 ```
-repo sync
+repo init -u https://github.com/Bluenixx/bluenixx-manifest.git -b bluenixx-17.0 --git-lfs
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
+Sync:
+```
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
 
+Then build Bluenixx:
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
+```
+source build/envsetup.sh
+breakfast bangkk userdebug # or lunch lineage_bangkk-cp2a-userdebug
+mka bacon -j$(nproc --all)
+```
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
-
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
-
-
-Buildbot
---------
-
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+### Thank you for choosing Bluenixx!
