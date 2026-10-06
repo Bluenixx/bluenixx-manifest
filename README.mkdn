@@ -1,4 +1,4 @@
-### Bluenixx Build Manifest
+# Bluenixx Build Manifest
 
 Configure your git with your credentials.
 example:
@@ -7,9 +7,9 @@ example:
 git config --global user.name "Your Name"
 git config --global user.email "youremail@gmail.com"
 ```
-Log in with your Google account on ![Android Google Source](https://android.googlesource.com/) and copy the code that appears, paste it into the terminal, and then you can start your build.
+Log in with your Google account on [Android Google Source](https://android.googlesource.com/) and copy the code that appears, paste it into the terminal, and then you can start your build.
 
-Remember, all of this only applies if you're using your own build server. If it's local, there are more things to configure. Read the ![Lineage OS](https://wiki.lineageos.org/) documentation.
+Remember, all of this only applies if you're using your own build server. If it's local, there are more things to configure. Read the [Lineage OS](https://wiki.lineageos.org/) documentation.
 
 
 Initialize the Repo:
