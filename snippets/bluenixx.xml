@@ -206,4 +206,5 @@
   <!-- Tools -->
   <project path="lineage/contributors-cloud-generator" name="LineageOS/contributors-cloud-generator" groups="tools" revision="main" />
   <project path="lineage/scripts" name="LineageOS/scripts" groups="tools" revision="main" />
+  <project path="vendor/gapps" name="Bluenixx/vendor_gapps" revision="cinnamonbun" />
 </manifest>
