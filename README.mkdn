@@ -25,8 +25,39 @@ Then build Bluenixx:
 
 ```
 source build/envsetup.sh
-breakfast bangkk userdebug # or lunch lineage_bangkk-cp2a-userdebug
+breakfast bangkk userdebug  # or: lunch bluenixx_bangkk-<release>-userdebug (run "lunch" to list choices)
 mka bacon -j$(nproc --all)
 ```
 
 ### Thank you for choosing Bluenixx!
+## Build flags
+
+Set these environment variables before running `breakfast`:
+
+| Variable | Values | Effect |
+|---|---|---|
+| `RELEASE_TYPE` | `OFFICIAL`, `NIGHTLY`, `SNAPSHOT`, `EXPERIMENTAL` | Build type. If unset (or invalid) the build is `UNOFFICIAL`. |
+| `BLUENIXX_MAINTAINER` | maintainer username | Required for `OFFICIAL`. The `maintainer:product` pair must be listed in `vendor/lineage/bluenixx.maintainers`, otherwise the build falls back to `UNOFFICIAL`. |
+| `WITH_GMS` | `true` | Includes GApps (MindTheGapps, `cinnamonbun` branch) and tags the zip as `GAPPS`. If unset the zip is `VANILLA`. |
+
+Zip name:
+
+```
+bluenixx-17.0-<DATE>-<TYPE>-<GAPPS|VANILLA>-<device>.zip
+```
+
+Examples:
+
+```
+# Official, with GApps
+export RELEASE_TYPE=OFFICIAL
+export BLUENIXX_MAINTAINER=zedisspp
+export WITH_GMS=true
+breakfast bangkk
+mka bacon -j$(nproc --all)
+
+# Unofficial, vanilla
+unset RELEASE_TYPE BLUENIXX_MAINTAINER WITH_GMS
+breakfast bangkk
+mka bacon -j$(nproc --all)
+```
