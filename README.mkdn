@@ -61,3 +61,19 @@ unset RELEASE_TYPE BLUENIXX_MAINTAINER WITH_GMS
 breakfast bangkk
 mka bacon -j$(nproc --all)
 ```
+
+## Setting the flags in the device tree
+
+Instead of `export`, the flags can be set with `:=` in `bluenixx_<device>.mk`:
+
+```make
+RELEASE_TYPE := OFFICIAL
+BLUENIXX_MAINTAINER := zedisspp
+WITH_GMS := true
+```
+
+Notes:
+
+- Put them **before** the first `inherit-product` line. `vendor/lineage` reads them when it is inherited, so anything set after that is ignored.
+- A value set with `:=` overrides the terminal `export`. To keep it only as a default that the terminal can still override, use `?=` instead.
+- `OFFICIAL` still requires the `maintainer:product` pair in `vendor/lineage/bluenixx.maintainers`.
