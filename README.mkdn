@@ -70,6 +70,7 @@ Instead of `export`, the flags can be set with `:=` in `bluenixx_<device>.mk`:
 RELEASE_TYPE := OFFICIAL
 BLUENIXX_MAINTAINER := zedisspp
 WITH_GMS := true
+INCLUDE_OVERMORROW := true
 ```
 
 Notes:
