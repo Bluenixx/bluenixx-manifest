@@ -18,7 +18,7 @@ repo init -u https://github.com/Bluenixx/bluenixx-manifest.git -b bluenixx-17.0 
 ```
 Sync:
 ```
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo sync
 ```
 
 Then build Bluenixx:
