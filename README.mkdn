@@ -74,6 +74,8 @@ WITH_GMS := true
 
 Notes:
 
+- alter a product of lineage_$device.mk to > bluenixx_$device.mk
+
 - Put them **before** the first `inherit-product` line. `vendor/lineage` reads them when it is inherited, so anything set after that is ignored.
 - A value set with `:=` overrides the terminal `export`. To keep it only as a default that the terminal can still override, use `?=` instead.
 - `OFFICIAL` still requires the `maintainer:product` pair in `vendor/lineage/bluenixx.maintainers`.
