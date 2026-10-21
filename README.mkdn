@@ -74,6 +74,9 @@ WITH_GMS := true
 
 Notes:
 
+- Note: the gapps build includes MindTheGapps
+For Google apps, download them from the Play Store. Why on earth would anyone want that? It's basically blotterware...
+
 - Remember to sign your build with priv-keys
 https://github.com/Bluenixx/bluenixx-template-signing-builds
 
