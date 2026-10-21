@@ -93,6 +93,7 @@ Build flags can also be set in the device's Bluenixx product makefile, typically
 RELEASE_TYPE := OFFICIAL
 BLUENIXX_MAINTAINER := zedisspp
 WITH_GMS := true
+SURFACE_FLINGER_BOOST := true
 ```
 
 Place these assignments **before the first `inherit-product` line**. The relevant `vendor/lineage` makefiles read the values when they are inherited, so assignments made afterward may not take effect.
