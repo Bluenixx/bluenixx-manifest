@@ -1103,4 +1103,5 @@
   </project>
 
   <include name="snippets/bluenixx.xml" />
+  <include name="snippets/bluenixx_maintainers.xml" />
 </manifest>

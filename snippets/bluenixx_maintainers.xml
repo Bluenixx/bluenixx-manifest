@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Bluenixx Maintainers -->
+  <project path="vendor/bluenixx_maintainers" name="Bluenixx/bluenixx_maintainers" />
+</manifest>
