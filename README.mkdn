@@ -90,8 +90,13 @@ The final filename depends on the naming logic implemented by the source tree.
 Build flags can also be set in the device's Bluenixx product makefile, typically named `bluenixx_<device>.mk`:
 
 ```make
-RELEASE_TYPE := OFFICIAL
-BLUENIXX_MAINTAINER := zedisspp
+BLUENIXX_MAINTAINER := Unknown
+
+#This flag is only for checking and deciding the build type OFFICIAL/UNOFFICIAL
+
+To set a maintainer name, create an overlay for the Settings, for example:
+https://github.com/zedisspp/device_motorola_bangkk/commit/204090d3906b4775b4e010e55c14989e8598e075
+
 WITH_GMS := true
 SURFACE_FLINGER_BOOST := true
 ```
